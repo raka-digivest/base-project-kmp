@@ -49,7 +49,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
-            api(projects.presentation)
+            api(projects.baseProjectApp.presentation)
             implementation(libs.koin.core)
             api(libs.voyager.navigator)
         }

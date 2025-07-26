@@ -29,7 +29,8 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":data")
-include(":domain")
-include(":presentation")
-include(":design-system")
+include(":baseProjectApp:data")
+include(":baseProjectApp:domain")
+include(":baseProjectApp:presentation")
+include(":baseProjectApp")
+include(":baseProjectApp:design-system")
