@@ -1,7 +1,7 @@
-package com.example.data.repository.news
+package com.example.data.news.repository
 
-import com.example.data.api.news.INewsApi
-import com.example.data.model.news.News
+import com.example.data.news.api.INewsApi
+import com.example.data.news.model.News
 
 class NewsRepositoryImpl(private val api: INewsApi) : INewsRepository {
 

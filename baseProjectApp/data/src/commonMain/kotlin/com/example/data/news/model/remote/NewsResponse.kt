@@ -1,4 +1,4 @@
-package com.example.data.model.remote
+package com.example.data.news.model.remote
 
 import kotlinx.serialization.Serializable
 

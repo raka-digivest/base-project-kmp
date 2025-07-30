@@ -1,6 +1,7 @@
 package com.example.presentation.news
 
-import com.example.data.model.news.News
+import com.example.data.news.model.News
+
 
 sealed interface NewsViewState {
     val news: List<News>

@@ -6,13 +6,17 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.koinScreenModel
+import com.example.presentation.base.BaseScreen
 
-class NewsScreen : Screen {
+class NewsScreen : BaseScreen<NewsViewModel>() {
     @Composable
-    override fun Content() {
-        val viewModel = koinScreenModel<NewsViewModel>()
+    override fun initViewModel(): NewsViewModel {
+        return koinScreenModel<NewsViewModel>()
+    }
+
+    @Composable
+    override fun buildView(viewModel: NewsViewModel) {
         val state by viewModel.state.collectAsState()
         viewModel.sendEvent(NewsViewEvent.LoadNews)
 
