@@ -1,8 +1,8 @@
-package com.example.data.api.news
+package com.example.data.news.api
 
 import com.example.data.helper.safeRequest
-import com.example.data.model.news.News
-import com.example.data.model.remote.NewsResponse
+import com.example.data.news.model.News
+import com.example.data.news.model.remote.NewsResponse
 import io.ktor.client.HttpClient
 
 class NewsApi(private val httpClient: HttpClient): INewsApi {

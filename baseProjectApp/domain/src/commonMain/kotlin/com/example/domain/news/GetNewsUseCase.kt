@@ -1,6 +1,6 @@
 package com.example.domain.news
 
-import com.example.data.repository.news.INewsRepository
+import com.example.data.news.repository.INewsRepository
 
 class GetNewsUseCase(private val repository: INewsRepository) {
 

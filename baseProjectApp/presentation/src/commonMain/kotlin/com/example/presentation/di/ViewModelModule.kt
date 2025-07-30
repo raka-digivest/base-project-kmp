@@ -1,8 +1,10 @@
 package com.example.presentation.di
 
-import com.example.presentation.news.NewsViewModel
-import org.koin.dsl.module
+import com.example.presentation.news.di.newViewModelModule
+import org.koin.core.module.Module
 
-val viewModelModule = module {
-    factory { NewsViewModel(getNewsUseCase = get()) }
-}
+
+val viewModelModule: List<Module>
+    get() = listOf(
+        newViewModelModule
+    )

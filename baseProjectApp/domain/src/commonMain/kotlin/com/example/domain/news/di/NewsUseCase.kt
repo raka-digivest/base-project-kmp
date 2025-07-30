@@ -1,4 +1,4 @@
-package com.example.domain.di.news
+package com.example.domain.news.di
 
 import com.example.domain.news.GetNewsUseCase
 import org.koin.dsl.module

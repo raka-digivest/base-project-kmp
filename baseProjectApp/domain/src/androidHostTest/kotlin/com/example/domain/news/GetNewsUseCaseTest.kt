@@ -1,7 +1,7 @@
 package com.example.domain.news
 
-import com.example.data.model.news.News
-import com.example.data.repository.news.INewsRepository
+import com.example.data.news.model.News
+import com.example.data.news.repository.INewsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll

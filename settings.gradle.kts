@@ -27,10 +27,10 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 include(":composeApp")
 include(":baseProjectApp:data")
 include(":baseProjectApp:domain")
 include(":baseProjectApp:presentation")
 include(":baseProjectApp")
 include(":baseProjectApp:design-system")
+include(":baseProjectApp:base")
