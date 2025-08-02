@@ -13,6 +13,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    includeBuild("build-logic/data-module")
+    includeBuild("build-logic/domain-module")
+    includeBuild("build-logic/presentation-module")
 }
 
 dependencyResolutionManagement {
