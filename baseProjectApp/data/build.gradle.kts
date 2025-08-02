@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidKotlinMultiplatformLibrary)
+    id("plugin.DataModulePlugin")
     kotlin("plugin.serialization") version "1.9.10"
 }
 
@@ -61,11 +62,6 @@ kotlin {
             dependencies {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
-                implementation(libs.ktor.core)
-                implementation(libs.ktor.json)
-                implementation(libs.ktor.logging)
-                implementation(libs.ktor.negotiation)
-                implementation(libs.koin.core)
 
             }
         }
