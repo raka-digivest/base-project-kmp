@@ -20,6 +20,8 @@ ktor = "2.3.5"
 koin = "3.5.0"
 voyager = "1.1.0-beta02"
 kermit = "1.0.0"
+image-loader-version = "1.5.3"
+composeWebviewMultiplatform = "1.9.40"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -52,6 +54,8 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "composeMultipla
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "composeMultiplatform" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+image-loader = {module= "io.github.qdsfdhvh:image-loader", version.ref = "image-loader-version"}
+compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
 
 
 [bundles]

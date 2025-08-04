@@ -28,7 +28,7 @@ val ktorModule = module {
             }
 
             install(DefaultRequest) {
-                url("https://newsapi.org/")
+                url("https://dummyjson.com/")
             }
 
         }

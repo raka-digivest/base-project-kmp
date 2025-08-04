@@ -32,8 +32,8 @@ suspend inline fun <reified T> safeRequest(
     val baseResponse = response.body<BaseResponseT<T>>()
 
     if (response.status != HttpStatusCode.OK) {
-        throw Exception(baseResponse.status)
+        throw Exception("failed")
     }
 
-    return baseResponse.articles ?: throw Exception(baseResponse.status)
+    return baseResponse.ebooks ?: throw Exception("failed")
 }

@@ -15,6 +15,8 @@ class PresentationModulePlugin : Plugin<Project> {
         val voyagerTransitions = libs.findLibrary("voyager-transitions").get()
         val voyagerKoin = libs.findLibrary("voyager-koin").get()
         val kermit = libs.findLibrary("kermit").get()
+        val imageLoader = libs.findLibrary("image-loader").get()
+        val composeWebviewMultiplatform = libs.findLibrary("compose-webview-multiplatform").get()
 
         //val compose = libs.findBundle("compose").get()
 
@@ -25,6 +27,8 @@ class PresentationModulePlugin : Plugin<Project> {
                 implementation(voyagerTransitions)
                 implementation(voyagerKoin)
                 implementation(kermit)
+                implementation(imageLoader)
+                implementation(composeWebviewMultiplatform)
 
                 //implementation(compose)
             }
