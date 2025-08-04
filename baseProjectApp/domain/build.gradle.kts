@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidKotlinMultiplatformLibrary)
+    id("plugin.DomainModulePlugin")
 }
 
 kotlin {
@@ -62,7 +63,6 @@ kotlin {
                 implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
                 api(projects.baseProjectApp.data)
-                api(libs.koin.core)
             }
         }
 

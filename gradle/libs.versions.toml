@@ -48,6 +48,19 @@ voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "composeMultiplatform" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-material = { module = "androidx.compose.material:material", version.ref = "composeMultiplatform" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+
+
+[bundles]
+compose = [
+    "compose-ui",
+    "compose-foundation",
+    "compose-material",
+    "compose-ui-tooling-preview",
+]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

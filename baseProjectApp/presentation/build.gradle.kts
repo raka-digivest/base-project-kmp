@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidKotlinMultiplatformLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    id("plugin.PresentationModulePlugin")
 }
 
 kotlin {
@@ -17,6 +18,9 @@ kotlin {
 
         withHostTestBuilder {
         }
+
+        // Required for Compose Multiplatform (CMP) version 1.8.2+ to correctly process Android resources.
+        androidResources.enable = true
 
         withDeviceTestBuilder {
             sourceSetTreeName = "test"
@@ -64,20 +68,16 @@ kotlin {
                 // Add KMP dependencies here
                 api(projects.baseProjectApp.domain)
                 api(projects.baseProjectApp.designSystem)
-                implementation(libs.androidx.lifecycle.viewmodel)
-                implementation(libs.androidx.lifecycle.runtimeCompose)
+
+                //Todo move this compose multiplatform to presentation module build logic
                 compose.apply {
                     implementation(foundation)
                     implementation(material)
                     implementation(ui)
-                    implementation(components.resources)
                     implementation(components.uiToolingPreview)
                     implementation(components.resources)
                 }
-                implementation(libs.voyager.navigator)
-                implementation(libs.voyager.transitions)
-                implementation(libs.voyager.koin)
-                implementation(libs.kermit)
+
             }
         }
 
